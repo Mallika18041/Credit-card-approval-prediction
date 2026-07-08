@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Approval Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Credit Card Approval Prediction</h1>
+
+    <form method="POST">
+
+        <label>Age</label>
+        <input type="number" name="age" placeholder="Enter Age" required>
+
+        <label>Income</label>
+        <input type="number" name="income" placeholder="Enter Annual Income" required>
+
+        <label>Credit Score</label>
+        <input type="number" name="credit_score" placeholder="Enter Credit Score" required>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
